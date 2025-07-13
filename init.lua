@@ -28,6 +28,7 @@ require("lazy").setup({
 	require("plugins.autoformatting"),
 	require("plugins.gitsigns"),
 	require("plugins.alpha"),
+	require("plugins.indent-blankline"),
 })
 
 vim.g.catppuccin_flavor = "mocha"
