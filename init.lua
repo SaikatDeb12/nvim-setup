@@ -27,6 +27,7 @@ require("lazy").setup({
 	require("plugins.autocompletion"),
 	require("plugins.autoformatting"),
 	require("plugins.gitsigns"),
+	require("plugins.alpha"),
 })
 
 vim.g.catppuccin_flavor = "mocha"
