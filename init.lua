@@ -29,7 +29,14 @@ require("lazy").setup({
 	require("plugins.gitsigns"),
 	require("plugins.alpha"),
 	require("plugins.indent-blankline"),
+	require("plugins.misc"),
 })
 
-vim.g.catppuccin_flavor = "mocha"
-vim.cmd.colorscheme("catppuccin")
+-- vim.g.catppuccin_flavor = "mocha"
+-- vim.cmd.colorscheme("catppuccin")
+--
+-- vim.cmd.colorscheme("vague")
+--
+-- vim.o.background = "dark" -- or "light" for light mode
+-- vim.cmd([[colorscheme gruvbox]])
+vim.cmd.colorscheme("ayu")
