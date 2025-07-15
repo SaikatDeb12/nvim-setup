@@ -15,6 +15,7 @@ return {
 				"prettier", -- ts/js formatter
 				"eslint_d", -- ts/js linter
 				"shfmt", -- Shell formatter
+				"clang-format",
 				-- 'checkmake', -- linter for Makefiles
 				-- 'stylua', -- lua formatter; Already installed via Mason
 				-- 'ruff', -- Python linter and formatter; Already installed via Mason
@@ -30,6 +31,14 @@ return {
 			formatting.terraform_fmt,
 			require("none-ls.formatting.ruff").with({ extra_args = { "--extend-select", "I" } }),
 			require("none-ls.formatting.ruff_format"),
+
+			formatting.clang_format.with({
+				filetypes = { "c", "cpp", "objc", "objcpp" },
+				extra_args = {
+					"--style",
+					"{IndentWidth: 4, TabWidth: 4, UseTab: Never}",
+				},
+			}),
 		}
 
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
