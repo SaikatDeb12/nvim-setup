@@ -33,10 +33,14 @@ require("lazy").setup({
 })
 
 vim.g.catppuccin_flavor = "mocha"
-vim.cmd.colorscheme("catppuccin")
+-- vim.cmd.colorscheme("catppuccin")
+-- vim.cmd.colorscheme("ayu-mirage")
 --
 -- vim.cmd.colorscheme("vague")
 --
 -- vim.o.background = "dark" -- or "light" for light mode
 -- vim.cmd([[colorscheme gruvbox]])
--- vim.cmd.colorscheme("ayu")
+-- vim.cmd.colorscheme("miasma")
+-- vim.cmd.colorscheme("nord")
+vim.o.background = "dark"
+vim.cmd([[colorscheme tokyonight]])

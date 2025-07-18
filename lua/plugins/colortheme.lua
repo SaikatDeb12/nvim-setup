@@ -12,8 +12,22 @@ return {
 			})
 		end,
 	},
-	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
+	-- { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
 	{
 		"Shatur/neovim-ayu",
+	},
+	{
+		"xero/miasma.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"morhetz/gruvbox",
+	},
+	{
+		"folke/tokyonight.nvim",
+	},
+	{
+		"arcticicestudio/nord-vim",
 	},
 }
