@@ -30,6 +30,7 @@ require("lazy").setup({
 	require("plugins.alpha"),
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
+	require("plugins.ts-autotag"),
 })
 
 vim.g.catppuccin_flavor = "mocha"
