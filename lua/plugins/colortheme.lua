@@ -12,7 +12,6 @@ return {
 			})
 		end,
 	},
-	-- { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
 	{
 		"Shatur/neovim-ayu",
 	},
@@ -29,5 +28,14 @@ return {
 	},
 	{
 		"arcticicestudio/nord-vim",
+	},
+	{
+		"joshdick/onedark.vim",
+	},
+	{
+		"rebelot/kanagawa.nvim",
+	},
+	{
+		"sainnhe/everforest",
 	},
 }

@@ -1,5 +1,3 @@
--- File: ~/.config/nvim/lua/plugins/ts-autotag.lua
-
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
