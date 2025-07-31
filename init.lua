@@ -33,15 +33,22 @@ require("lazy").setup({
 	require("plugins.ts-autotag"),
 	require("plugins.wakatime"),
 	require("plugins.cursorline"),
+	require("plugins.noice"),
+	require("plugins.neoscroll"),
+	-- require("plugins.smear-cursor"),
 })
 
 vim.g.catppuccin_flavor = "mocha"
 -- vim.cmd.colorscheme("catppuccin")
 -- vim.cmd.colorscheme("ayu-mirage")
-vim.cmd.colorscheme("onedark")
+-- vim.cmd.colorscheme("onedark")
 -- vim.cmd.colorscheme("kanagawa")
+-- vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("bamboo")
 --
 -- vim.cmd.colorscheme("vague")
+-- vim.cmd.colorscheme("solarized-osaka")
+-- vim.cmd.colorscheme("gruvbox")
 --
 -- vim.o.background = "dark" -- or "light" for light mode
 -- vim.cmd([[colorscheme gruvbox]])

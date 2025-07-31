@@ -1,5 +1,49 @@
 return {
 	{
+		"ribru17/bamboo.nvim",
+		config = function()
+			require("bamboo").setup({
+				transparent = true, -- Built-in option
+				colors = {
+					bg = "#1e1e1e90", -- Background with 90% opacity
+				},
+			})
+		end,
+	},
+	{
+		{
+			"folke/tokyonight.nvim",
+			opts = {
+				style = "moon",
+				transparent = true, -- Built-in option
+				styles = {
+					sidebars = "transparent",
+					floats = "transparent",
+				},
+			},
+		},
+	},
+	{
+		"olimorris/onedarkpro.nvim",
+		config = function()
+			require("onedarkpro").setup({
+				options = {
+					transparency = true, -- Built-in transparency
+				},
+			})
+		end,
+	},
+	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = true,
+		priority = 1000,
+		opts = function()
+			return {
+				transparent = true,
+			}
+		end,
+	},
+	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
@@ -21,17 +65,18 @@ return {
 		priority = 1000,
 	},
 	{
-		"morhetz/gruvbox",
+		"ellisonleao/gruvbox.nvim",
+		-- "morhetz/gruvbox",
 	},
-	{
-		"folke/tokyonight.nvim",
-	},
+	-- {
+	-- 	"folke/tokyonight.nvim",
+	-- },
 	{
 		"arcticicestudio/nord-vim",
 	},
-	{
-		"joshdick/onedark.vim",
-	},
+	-- {
+	-- 	"joshdick/onedark.vim",
+	-- },
 	{
 		"rebelot/kanagawa.nvim",
 	},

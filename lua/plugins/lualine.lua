@@ -12,7 +12,23 @@ return {
 		local filename = {
 			"filename",
 			file_status = true, -- displays file status (readonly status, modified status)
-			path = 0, -- 0 = just filename, 1 = relative path, 2 = absolute path
+			path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
+			-- Custom formatting to show only a few parent directories
+			fmt = function(path)
+				-- Split the path into parts
+				local parts = {}
+				for part in path:gmatch("[^/]+") do
+					table.insert(parts, part)
+				end
+
+				-- If the path has 3 or more parts, show last 3 components
+				if #parts >= 3 then
+					return table.concat({ parts[#parts - 2], parts[#parts - 1], parts[#parts] }, "/")
+				else
+					-- Otherwise show the full path (which will be 1 or 2 parts)
+					return path
+				end
+			end,
 		}
 
 		local hide_in_width = function()
