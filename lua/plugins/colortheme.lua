@@ -1,5 +1,32 @@
 return {
 	{
+		"xiantang/darcula-dark.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	},
+	{
+		"wtfox/jellybeans.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			transparent = true,
+			italics = true,
+			bold = true,
+			flat_ui = true, -- toggles "flat UI" for pickers
+			background = {
+				dark = "jellybeans", -- default dark palette
+				light = "jellybeans_muted", -- default light palette
+			},
+			plugins = {
+				all = false,
+				auto = true, -- will read lazy.nvim and apply the colors for plugins that are installed
+			},
+			on_highlights = function(highlights, colors) end,
+			on_colors = function(colors) end,
+		}, -- Optional
+	},
+	{
 		"ribru17/bamboo.nvim",
 		config = function()
 			require("bamboo").setup({

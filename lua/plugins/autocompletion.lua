@@ -1,4 +1,4 @@
-return { -- Autocompletion
+return {
 	-- to navigate the options press ctrl-n and ctrl-p
 	"hrsh7th/nvim-cmp",
 	dependencies = {

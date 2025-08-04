@@ -42,10 +42,27 @@ vim.g.catppuccin_flavor = "mocha"
 -- vim.cmd.colorscheme("catppuccin")
 -- vim.cmd.colorscheme("ayu-mirage")
 -- vim.cmd.colorscheme("onedark")
--- vim.cmd.colorscheme("kanagawa")
+-- vim.cmd.colorscheme("kanagawa-dragon")
 -- vim.cmd.colorscheme("tokyonight")
-vim.cmd.colorscheme("bamboo")
+-- vim.cmd.colorscheme("bamboo")
+vim.cmd.colorscheme("darcula-dark")
 --
+-- Jellybean colorschemes:
+-- Default (vibrant dark)
+-- vim.cmd([[colorscheme jellybeans]])
+
+-- Vibrant light
+-- vim.cmd[[colorscheme jellybeans-light]]
+
+-- Muted dark
+-- vim.cmd([[colorscheme jellybeans-muted]])
+
+-- Muted light
+-- vim.cmd([[colorscheme jellybeans-muted-light]])
+
+-- Mono dark
+-- vim.cmd([[colorscheme jellybeans]])
+
 -- vim.cmd.colorscheme("vague")
 -- vim.cmd.colorscheme("solarized-osaka")
 -- vim.cmd.colorscheme("gruvbox")
