@@ -33,7 +33,7 @@ require("lazy").setup({
 	require("plugins.ts-autotag"),
 	require("plugins.wakatime"),
 	require("plugins.cursorline"),
-	require("plugins.noice"),
+	-- require("plugins.noice"),
 	require("plugins.neoscroll"),
 	-- require("plugins.smear-cursor"),
 })
@@ -41,12 +41,12 @@ require("lazy").setup({
 vim.g.catppuccin_flavor = "mocha"
 -- vim.cmd.colorscheme("catppuccin")
 -- vim.cmd.colorscheme("ayu-mirage")
--- vim.cmd.colorscheme("onedark")
--- vim.cmd.colorscheme("kanagawa-dragon")
 -- vim.cmd.colorscheme("tokyonight")
--- vim.cmd.colorscheme("bamboo")
-vim.cmd.colorscheme("darcula-dark")
+vim.cmd.colorscheme("bamboo")
+-- vim.cmd.colorscheme("darcula-dark")
 --
+-- vim.cmd.colorscheme("kanagawa-dragon")
+-- vim.cmd.colorscheme("onedark")
 -- Jellybean colorschemes:
 -- Default (vibrant dark)
 -- vim.cmd([[colorscheme jellybeans]])

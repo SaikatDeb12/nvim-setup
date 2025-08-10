@@ -67,9 +67,9 @@ return {
 		})
 
 		-- Define diagnostic signs with Nerd Font icons
-		for _, sign in ipairs(vim.diagnostic.config().signs.values) do
-			vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-		end
+		-- for _, sign in ipairs(vim.diagnostic.config().signs.values) do
+		-- 	vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+		-- end
 
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
@@ -224,6 +224,11 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
+			"prettier", -- ts/js formatter
+			"eslint_d", -- ts/js linter
+			"shfmt", -- Shell formatter
+			"clang-format", -- C/C++ formatter
+			-- "checkmake", -- Linter for Makefiles
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

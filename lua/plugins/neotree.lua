@@ -8,29 +8,44 @@ return {
 	},
 	lazy = false,
 	opts = {
-		close_if_last_window = true, -- Close Neo-tree if it's the last window left
+		close_if_last_window = true,
 		window = {
 			position = "float",
+			width = math.floor(vim.o.columns * 0.8),
+			height = math.floor(vim.o.lines * 0.8),
+			popup = { -- Settings for floating window
+				relative = "editor",
+				border = "rounded",
+				position = "50%", -- Center the window
+			},
 			mappings = {
 				["<esc>"] = "close_window",
 			},
 		},
 		filesystem = {
 			filtered_items = {
-				visible = true, -- Show hidden files by default
+				visible = true,
+				hide_dotfiles = false,
+				hide_gitignored = false,
+				hide_by_name = {
+					"node_modules",
+					".venv",
+					".git",
+					"__pycache__",
+					"dist",
+					"build",
+					"target",
+					"yarn.lock",
+					"package-lock.json",
+				},
+				never_show = {
+					".DS_Store",
+					"thumbs.db",
+				},
 			},
 		},
 	},
 	config = function(_, opts)
-		-- Custom float settings
-		opts.window.float = {
-			relative = "editor",
-			width = math.floor(vim.o.columns * 0.8),
-			height = math.floor(vim.o.lines * 0.8),
-			top = math.floor((vim.o.lines - vim.o.lines * 0.8) / 2),
-			left = math.floor((vim.o.columns - vim.o.columns * 0.8) / 2),
-			border = "rounded",
-		}
 		require("neo-tree").setup(opts)
 	end,
 }
