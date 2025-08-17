@@ -8,7 +8,7 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 local opts = { noremap = true, silent = true }
 
 -- Press Ctrl+A to select the whole file
-vim.keymap.set("n", "<C-A>", "ggVG", opts)
+-- vim.keymap.set("n", "<C-A>", "ggVG", opts)
 
 -- Make 'ii' act like <Esc> in insert, visual, and command modes
 vim.keymap.set("i", "ii", "<Esc>", { noremap = true }) -- Insert mode

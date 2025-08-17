@@ -36,6 +36,7 @@ require("lazy").setup({
 	-- require("plugins.noice"),
 	require("plugins.neoscroll"),
 	-- require("plugins.smear-cursor"),
+	require("plugins.tailwindcss-colors"),
 })
 
 vim.g.catppuccin_flavor = "mocha"

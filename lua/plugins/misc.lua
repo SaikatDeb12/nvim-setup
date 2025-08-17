@@ -1,4 +1,3 @@
--- Standalone plugins with less than 10 lines of config go here
 return {
 	{
 		-- Hints keybinds
@@ -11,16 +10,9 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = { signs = false },
 	},
-	{
-		-- High-performance color highlighter
-		"NvChad/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
-	},
 	-- {
-	-- 	Deprecated
-	-- 	"norcalli/nvim-colorizer.lua",
+	-- 	-- High-performance color highlighter
+	-- 	"NvChad/nvim-colorizer.lua",
 	-- 	config = function()
 	-- 		require("colorizer").setup()
 	-- 	end,
