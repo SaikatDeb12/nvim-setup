@@ -218,8 +218,16 @@ return {
 					},
 				},
 			},
+			-- can be included but the formatting gets changed
+			-- clangd = {
+			-- 	cmd = { "clangd", "--header-insertion=never", "--offset-encoding=utf-16" },
+			-- 	filetypes = { "c", "cpp", "objc", "objcpp" },
+			-- 	on_attach = function(client, bufnr)
+			-- 		-- completions stay enabled, but disable diagnostics
+			-- 		vim.diagnostic.enable(false)
+			-- 	end,
+			-- },
 		}
-
 		-- Ensure the servers and tools above are installed
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {

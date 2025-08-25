@@ -39,7 +39,7 @@ require("lazy").setup({
 	require("plugins.tailwindcss-colors"),
 })
 
-vim.g.catppuccin_flavor = "mocha"
+vim.g.catppuccin_flavor = "dark"
 -- vim.cmd.colorscheme("catppuccin")
 -- vim.cmd.colorscheme("ayu-mirage")
 -- vim.cmd.colorscheme("tokyonight")
