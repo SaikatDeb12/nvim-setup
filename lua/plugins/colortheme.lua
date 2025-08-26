@@ -32,7 +32,8 @@ return {
 			require("bamboo").setup({
 				transparent = true, -- Built-in option
 				colors = {
-					bg = "#1e1e1e90", -- Background with 90% opacity
+					-- bg = "#1e1e1e90", -- Background with 90% opacity
+					bg = "#1e1e1e50",
 				},
 			})
 		end,

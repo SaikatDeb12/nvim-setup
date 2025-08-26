@@ -1,3 +1,34 @@
+-- Neovide specific settings
+vim.g.neovide_scale_factor = 0.75
+vim.g.neovide_hide_mouse_when_typing = false
+vim.g.neovide_confirm_quit = true
+vim.g.neovide_remember_window_size = true
+vim.g.neovide_cursor_vfx_mode = "pixiedust"
+
+-- Configuration for Background Image Effect
+-- Remove the window frame for a cleaner look with transparency
+vim.g.neovide_no_idle = true
+vim.g.neovide_fullscreen = false -- Fullscreen might override your wallpaper
+
+-- Set the background color to be almost completely transparent
+-- This lets your desktop wallpaper show through clearly
+vim.g.neovide_background_color = "#00000000"
+
+-- Set the overall window transparency to be very high
+vim.g.neovide_opacity = 0.95
+vim.g.transparency = 0.8
+
+-- Optional: You can also make the content (text) area have a slight tint
+-- This helps readability while still showing the background
+-- The 'alpha()' function from your config is perfect for this.
+local alpha = function()
+	return string.format("%x", math.floor(255 * (vim.g.editor_opacity or 0.92)))
+end
+vim.g.editor_opacity = 0.92 -- Slightly more opaque than the window for contrast
+vim.g.neovide_background_color = "#1e1e1e" .. alpha()
+
+-------------------------------------------------------------------------------------------------
+-- Neovim specific settings
 vim.wo.number = true -- Make line numbers default (default: false)
 vim.o.relativenumber = true -- Set relative numbered lines (default: false)
 -- vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim. (default: '')

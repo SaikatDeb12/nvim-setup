@@ -43,8 +43,8 @@ vim.g.catppuccin_flavor = "dark"
 -- vim.cmd.colorscheme("catppuccin")
 -- vim.cmd.colorscheme("ayu-mirage")
 -- vim.cmd.colorscheme("tokyonight")
-vim.cmd.colorscheme("bamboo")
--- vim.cmd.colorscheme("darcula-dark")
+-- vim.cmd.colorscheme("bamboo")
+vim.cmd.colorscheme("darcula-dark")
 --
 -- vim.cmd.colorscheme("kanagawa-dragon")
 -- vim.cmd.colorscheme("onedark")
