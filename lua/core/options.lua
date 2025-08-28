@@ -1,6 +1,6 @@
 -- Neovide specific settings
 vim.g.neovide_scale_factor = 0.75
-vim.g.neovide_hide_mouse_when_typing = false
+vim.g.neovide_hide_mouse_when_typing = true
 vim.g.neovide_confirm_quit = true
 vim.g.neovide_remember_window_size = true
 vim.g.neovide_cursor_vfx_mode = "pixiedust"
@@ -10,9 +10,13 @@ vim.g.neovide_cursor_vfx_mode = "pixiedust"
 vim.g.neovide_no_idle = true
 vim.g.neovide_fullscreen = false -- Fullscreen might override your wallpaper
 
--- Set the background color to be almost completely transparent
--- This lets your desktop wallpaper show through clearly
-vim.g.neovide_background_color = "#00000000"
+vim.g.neovide_title_background_color =
+	string.format("%x", vim.api.nvim_get_hl(0, { id = vim.api.nvim_get_hl_id_by_name("Normal") }).bg)
+
+vim.g.neovide_title_text_color = "white"
+
+-- Setting the font:
+vim.o.guifont = "FiraCode_Nerd_Font_Mono:h14"
 
 -- Set the overall window transparency to be very high
 vim.g.neovide_opacity = 0.95
