@@ -37,6 +37,7 @@ require("lazy").setup({
 	require("plugins.neoscroll"),
 	-- require("plugins.smear-cursor"),
 	require("plugins.tailwindcss-colors"),
+	require("plugins.competitive"),
 })
 
 vim.g.catppuccin_flavor = "dark"

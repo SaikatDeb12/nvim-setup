@@ -89,3 +89,24 @@ end, { desc = "Go to next diagnostic message" })
 
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+
+-- CompetiTest keymaps for competitive programming
+vim.keymap.set("n", "<leader>cta", "<cmd>CompetiTest add_testcase<CR>", { desc = "CompetiTest: Add testcase" })
+vim.keymap.set("n", "<leader>cte", "<cmd>CompetiTest edit_testcase<CR>", { desc = "CompetiTest: Edit testcase" })
+vim.keymap.set("n", "<leader>ctd", "<cmd>CompetiTest delete_testcase<CR>", { desc = "CompetiTest: Delete testcase" })
+vim.keymap.set("n", "<leader>ctr", "<cmd>CompetiTest run<CR>", { desc = "CompetiTest: Run testcases" })
+vim.keymap.set(
+	"n",
+	"<leader>ctR",
+	"<cmd>CompetiTest run_no_compile<CR>",
+	{ desc = "CompetiTest: Run without recompile" }
+)
+vim.keymap.set("n", "<leader>ctu", "<cmd>CompetiTest show_ui<CR>", { desc = "CompetiTest: Show runner UI" })
+vim.keymap.set("n", "<leader>ctp", "<cmd>CompetiTest receive problem<CR>", { desc = "CompetiTest: Receive problem" })
+vim.keymap.set("n", "<leader>ctc", "<cmd>CompetiTest receive contest<CR>", { desc = "CompetiTest: Receive contest" })
+vim.keymap.set(
+	"n",
+	"<leader>ctt",
+	"<cmd>CompetiTest receive testcases<CR>",
+	{ desc = "CompetiTest: Receive testcases" }
+)
