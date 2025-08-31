@@ -37,6 +37,7 @@ require("lazy").setup({
 	require("plugins.neoscroll"),
 	-- require("plugins.smear-cursor"),
 	require("plugins.tailwindcss-colors"),
+	require("plugins.luasnip"),
 	require("plugins.competitive"),
 })
 

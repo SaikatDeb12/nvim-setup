@@ -16,7 +16,6 @@ return {
 		end, {}),
 		t({
 			"",
-			'#pragma GCC optimize("O3,unroll-loops")',
 			"#include <bits/stdc++.h>",
 			"#include <ext/pb_ds/assoc_container.hpp>",
 			"#include <ext/pb_ds/tree_policy.hpp>",
@@ -131,6 +130,26 @@ return {
 			"    int test = 1;",
 			"    cin >> test;",
 			"    itr(each, test) solve();",
+			"    return 0;",
+			"}",
+		}),
+	}),
+	s("smallBoiler", {
+		f(function()
+			return get_author_date()
+		end, {}),
+		t({
+			"",
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"void solve() {}",
+			"",
+			"int main() {",
+			"    ios_base::sync_with_stdio(0);",
+			"    cin.tie(0);",
+			"    cout << fixed << setprecision(9);",
+			"    solve();",
 			"    return 0;",
 			"}",
 		}),
