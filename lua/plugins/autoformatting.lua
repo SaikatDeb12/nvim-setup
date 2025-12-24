@@ -36,6 +36,8 @@ return {
 
 		local sources = {
 			diagnostics.checkmake,
+
+			-- JS/TS
 			formatting.prettier.with({
 				filetypes = {
 					"html",
@@ -59,8 +61,12 @@ return {
 			formatting.stylua, -- Already defaults to 4 spaces
 			formatting.shfmt.with({ args = { "-i", "4" } }),
 			formatting.terraform_fmt,
+
+			-- Python
 			require("none-ls.formatting.ruff").with({ extra_args = { "--extend-select", "I" } }),
 			require("none-ls.formatting.ruff_format"),
+
+			-- C/C++
 			formatting.clang_format.with({
 				filetypes = { "c", "cpp", "objc", "objcpp" },
 				extra_args = {
@@ -68,6 +74,9 @@ return {
 					"{IndentWidth: 4, TabWidth: 4, UseTab: Never}",
 				},
 			}),
+
+			-- Go
+			formatting.goimports,
 		}
 
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

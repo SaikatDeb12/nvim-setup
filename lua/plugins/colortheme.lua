@@ -1,5 +1,14 @@
 return {
 	{
+		"sainnhe/sonokai",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.sonokai_style = "andromeda"
+			vim.g.sonokai_transparent_background = 1
+		end,
+	},
+	{
 		"xiantang/darcula-dark.nvim",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
@@ -30,7 +39,7 @@ return {
 		"ribru17/bamboo.nvim",
 		config = function()
 			require("bamboo").setup({
-				transparent = true, -- Built-in option
+				transparent = false, -- Built-in option
 				colors = {
 					-- bg = "#1e1e1e90", -- Background with 90% opacity
 					bg = "#1e1e1e50",
