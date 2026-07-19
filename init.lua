@@ -20,6 +20,8 @@ require("lazy").setup({
 	require("plugins.neotree"),
 	require("plugins.colortheme"),
 	require("plugins.bufferline"),
+	-- require("plugins.alpha"),
+	-- require("plugins.snacks"),
 	require("plugins.lualine"),
 	require("plugins.treesitter"),
 	require("plugins.telescope"),
@@ -27,7 +29,6 @@ require("lazy").setup({
 	require("plugins.autocompletion"),
 	require("plugins.autoformatting"),
 	require("plugins.gitsigns"),
-	require("plugins.alpha"),
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
 	require("plugins.ts-autotag"),
@@ -40,16 +41,20 @@ require("lazy").setup({
 	require("plugins.luasnip"),
 	require("plugins.competitive"),
 	require("plugins.live-server"),
+	require("plugins.oil"),
+	require("plugins.go"),
+	require("plugins.mini-bufremove"),
 })
 
-vim.g.catppuccin_flavor = "light"
-vim.cmd.colorscheme("catppuccin")
+-- vim.g.catppuccin_flavor = "light"
+-- vim.cmd.colorscheme("catppuccin")
 -- vim.cmd.colorscheme("ayu-mirage")
 -- vim.cmd.colorscheme("tokyonight")
 -- vim.cmd.colorscheme("bamboo")
--- vim.cmd.colorscheme("darcula-dark")
+vim.cmd.colorscheme("darcula-dark")
+-- vim.cmd.colorscheme("kanagawa-wave")
 --
--- vim.cmd.colorscheme("kanagawa-dragon")
+-- vim.cmd.colorscheme("sonokai")
 -- vim.cmd.colorscheme("onedark")
 -- Jellybean colorschemes:
 -- Default (vibrant dark)
@@ -66,7 +71,7 @@ vim.cmd.colorscheme("catppuccin")
 --
 -- vim.o.background = "dark"
 -- vim.cmd([[colorscheme tokyonight]])
---
--- vim.o.background = "dark"
--- vim.g.everforest_background = "hard"
+
+-- vim.o.background = "soft"
+-- vim.g.everforest_background = "soft"
 -- vim.cmd([[colorscheme everforest]])
