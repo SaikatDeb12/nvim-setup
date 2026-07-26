@@ -20,7 +20,7 @@ require("lazy").setup({
 	require("plugins.neotree"),
 	require("plugins.colortheme"),
 	require("plugins.bufferline"),
-	-- require("plugins.alpha"),
+	require("plugins.alpha"),
 	-- require("plugins.snacks"),
 	require("plugins.lualine"),
 	require("plugins.treesitter"),
@@ -44,6 +44,7 @@ require("lazy").setup({
 	require("plugins.oil"),
 	require("plugins.go"),
 	require("plugins.mini-bufremove"),
+	-- require("plugins.toggleterm"),
 })
 
 -- vim.g.catppuccin_flavor = "light"
@@ -51,7 +52,7 @@ require("lazy").setup({
 -- vim.cmd.colorscheme("ayu-mirage")
 -- vim.cmd.colorscheme("tokyonight")
 -- vim.cmd.colorscheme("bamboo")
-vim.cmd.colorscheme("darcula-dark")
+-- vim.cmd.colorscheme("darcula-dark")
 -- vim.cmd.colorscheme("kanagawa-wave")
 --
 -- vim.cmd.colorscheme("sonokai")
@@ -66,7 +67,7 @@ vim.cmd.colorscheme("darcula-dark")
 -- vim.o.background = "dark" -- or "light" for light mode
 -- vim.cmd([[colorscheme gruvbox]])
 --
--- vim.cmd.colorscheme("miasma")
+vim.cmd.colorscheme("miasma")
 -- vim.cmd.colorscheme("nord")
 --
 -- vim.o.background = "dark"

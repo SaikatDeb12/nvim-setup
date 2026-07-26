@@ -60,14 +60,32 @@ return {
 				-- Some useful glyphs:
 				-- https://www.nerdfonts.com/cheat-sheet
 				--        
-				section_separators = { left = "", right = "" },
+				-- section_separators = { left = "", right = "" },
+				-- component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 				component_separators = { left = "", right = "" },
 				disabled_filetypes = { "alpha", "neo-tree" },
 				always_divide_middle = true,
 			},
 			sections = {
-				lualine_a = { mode },
-				lualine_b = { "branch" },
+				lualine_a = {
+					{
+						"mode",
+						fmt = function(str)
+							return " " .. str
+						end,
+						separator = { left = "" },
+						right_padding = 2,
+					},
+				},
+				-- lualine_a = { mode },
+				-- lualine_b = { "branch" },
+				lualine_b = {
+					{
+						"branch",
+						separator = { left = "", right = "" },
+					},
+				},
 				lualine_c = { filename },
 				lualine_x = {
 					diagnostics,
@@ -76,7 +94,14 @@ return {
 					{ "filetype", cond = hide_in_width },
 				},
 				lualine_y = { "location" },
-				lualine_z = { "progress" },
+				lualine_z = {
+					{
+						"progress",
+						separator = { right = "" },
+						left_padding = 2,
+					},
+				},
+				-- lualine_z = { "progress" },
 			},
 			inactive_sections = {
 				lualine_a = {},

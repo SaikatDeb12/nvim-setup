@@ -21,7 +21,7 @@ vim.o.guifont = "FiraCode_Nerd_Font_Mono:h14"
 -- vim.o.guifont = "Cascadia Mono:h14"
 
 -- Set the overall window transparency to be very high
-vim.g.neovide_opacity = 0.92
+vim.g.neovide_opacity = 0.95
 vim.g.transparency = 0.8
 
 -- Optional: You can also make the content (text) area have a slight tint
