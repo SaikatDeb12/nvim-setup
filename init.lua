@@ -44,6 +44,7 @@ require("lazy").setup({
 	require("plugins.oil"),
 	require("plugins.go"),
 	require("plugins.mini-bufremove"),
+	require("plugins.undotree"),
 	-- require("plugins.toggleterm"),
 })
 
