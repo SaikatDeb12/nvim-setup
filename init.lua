@@ -32,7 +32,7 @@ require("lazy").setup({
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
 	require("plugins.ts-autotag"),
-	require("plugins.wakatime"),
+	-- require("plugins.wakatime"),
 	require("plugins.cursorline"),
 	-- require("plugins.noice"),
 	require("plugins.neoscroll"),
@@ -54,6 +54,7 @@ require("lazy").setup({
 -- vim.cmd.colorscheme("bamboo")
 -- vim.cmd.colorscheme("darcula-dark")
 -- vim.cmd.colorscheme("kanagawa-wave")
+vim.cmd.colorscheme("miasma")
 --
 -- vim.cmd.colorscheme("sonokai")
 -- vim.cmd.colorscheme("onedark")
@@ -67,7 +68,6 @@ require("lazy").setup({
 -- vim.o.background = "dark" -- or "light" for light mode
 -- vim.cmd([[colorscheme gruvbox]])
 --
-vim.cmd.colorscheme("miasma")
 -- vim.cmd.colorscheme("nord")
 --
 -- vim.o.background = "dark"

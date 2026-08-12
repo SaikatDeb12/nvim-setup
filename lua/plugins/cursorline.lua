@@ -5,24 +5,25 @@ return {
 		config = function()
 			vim.opt.cursorline = true
 
-			-- Set the highlight colors
-			vim.api.nvim_set_hl(0, "CursorLine", { bg = "#3a3f4b" })
+			local function set_cursorline()
+				vim.api.nvim_set_hl(0, "CursorLine", {
+					bg = "#2b2a27",
+					underline = false,
+				})
+			end
 
-			-- Optional: Change color in insert mode
+			set_cursorline()
+
 			local group = vim.api.nvim_create_augroup("CursorLineGroup", { clear = true })
 
-			vim.api.nvim_create_autocmd("InsertEnter", {
+			vim.api.nvim_create_autocmd("ColorScheme", {
 				group = group,
-				callback = function()
-					vim.api.nvim_set_hl(0, "CursorLine", { bg = "#3a3f4b", underline = false })
-				end,
+				callback = set_cursorline,
 			})
 
-			vim.api.nvim_create_autocmd("InsertLeave", {
+			vim.api.nvim_create_autocmd({ "InsertEnter", "InsertLeave" }, {
 				group = group,
-				callback = function()
-					vim.api.nvim_set_hl(0, "CursorLine", { bg = "#3a3f4b", underline = false })
-				end,
+				callback = set_cursorline,
 			})
 		end,
 	},

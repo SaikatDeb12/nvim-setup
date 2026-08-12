@@ -8,7 +8,7 @@ vim.g.neovide_cursor_vfx_mode = "pixiedust"
 -- Configuration for Background Image Effect
 -- Remove the window frame for a cleaner look with transparency
 vim.g.neovide_no_idle = true
-vim.g.neovide_fullscreen = true -- Fullscreen might override your wallpaper
+vim.g.neovide_fullscreen = false -- Fullscreen might override your wallpaper
 
 vim.g.neovide_title_background_color =
 	string.format("%x", vim.api.nvim_get_hl(0, { id = vim.api.nvim_get_hl_id_by_name("Normal") }).bg)
@@ -21,7 +21,7 @@ vim.o.guifont = "FiraCode_Nerd_Font_Mono:h14"
 -- vim.o.guifont = "Cascadia Mono:h14"
 
 -- Set the overall window transparency to be very high
-vim.g.neovide_opacity = 0.95
+vim.g.neovide_opacity = 0.94
 vim.g.transparency = 0.8
 
 -- Optional: You can also make the content (text) area have a slight tint
@@ -32,6 +32,14 @@ local alpha = function()
 end
 vim.g.editor_opacity = 0.92 -- Slightly more opaque than the window for contrast
 vim.g.neovide_background_color = "#1e1e1e" .. alpha()
+
+-- added this for .cpp files to auto copy to clipboard on save
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+-- 	pattern = "*.cpp",
+-- 	callback = function()
+-- 		vim.fn.setreg("+", table.concat(vim.api.nvim_buf_get_lines(0, 0, -1, false), "\n"))
+-- 	end,
+-- })
 
 -------------------------------------------------------------------------------------------------
 -- Neovim specific settings

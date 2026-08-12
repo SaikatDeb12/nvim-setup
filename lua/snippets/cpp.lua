@@ -6,7 +6,7 @@ local f = ls.function_node
 -- Dynamic date and author function
 local function get_author_date()
 	local date = os.date("%Y-%m-%d %H:%M")
-	return "// Author: Saikat_deb | Created: " .. date
+	return "// Author: takias452 | Created: " .. date
 end
 
 return {
@@ -203,6 +203,7 @@ return {
 			"#define dbg(...)",
 			"#endif",
 			"",
+			"using int128 = __int128_t;",
 			"typedef long long LL;",
 			"#define inf_p INT_MAX",
 			"#define inf_n INT_MIN",
@@ -210,31 +211,6 @@ return {
 			"#define inf_nll LLONG_MIN",
 			"const LL MOD = 1000000007;",
 			"const LL MOD1 = 998244353;",
-			"",
-			"bool isPrime(int n) {",
-			"    if (n <= 1)",
-			"        return false;",
-			"    if (n <= 3)",
-			"        return true;",
-			"    if (n % 2 == 0 || n % 3 == 0)",
-			"        return false;",
-			"    for (int i = 5; i * i <= n; i += 6)",
-			"        if (n % i == 0 || n % (i + 2) == 0)",
-			"            return false;",
-			"    return true;",
-			"}",
-			"",
-			"LL power(LL a, LL b) {",
-			"    a %= MOD;",
-			"    LL res = 1;",
-			"    while (b) {",
-			"        if (b & 1)",
-			"            res = res * a % MOD;",
-			"        a = a * a % MOD;",
-			"        b >>= 1;",
-			"    }",
-			"    return res;",
-			"}",
 			"",
 			"void solve() {",
 			"",

@@ -30,6 +30,9 @@ vim.keymap.set("n", "<leader>sn", "<cmd>noautocmd w <CR>", opts)
 -- delete single character without copying into register
 vim.keymap.set("n", "x", '"_x', opts)
 
+-- detele a word while in insert mode
+vim.keymap.set("i", "<A-w>", "<C-w>")
+
 -- Vertical scroll and center
 vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
 vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
@@ -110,3 +113,9 @@ vim.keymap.set(
 	"<cmd>CompetiTest receive testcases<CR>",
 	{ desc = "CompetiTest: Receive testcases" }
 )
+
+-- Keymap to copy content to clipboard
+vim.keymap.set("n", "<leader>cc", function()
+	vim.fn.setreg("+", table.concat(vim.api.nvim_buf_get_lines(0, 0, -1, false), "\n"))
+	vim.notify("Copied file to clipboard")
+end, { desc = "Copy current file to clipboard" })

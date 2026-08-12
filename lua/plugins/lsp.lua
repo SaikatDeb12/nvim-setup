@@ -218,14 +218,44 @@ return {
 					},
 				},
 			},
-			-- can be included but the formatting gets changed
+			clangd = {
+				cmd = {
+					"clangd",
+					"--background-index",
+					"--completion-style=detailed",
+					"--header-insertion=iwyu",
+				},
+
+				on_attach = function(client, bufnr)
+					-- Disable diagnostics (no errors/warnings)
+					vim.diagnostic.enable(false, { bufnr = bufnr })
+
+					-- Disable clangd formatting.
+					-- Formatting will be done by none-ls + clang-format.
+					client.server_capabilities.documentFormattingProvider = false
+					client.server_capabilities.documentRangeFormattingProvider = false
+				end,
+			},
+			-- comment out to enable lsp for c++
 			-- clangd = {
-			-- 	cmd = { "clangd", "--header-insertion=never", "--offset-encoding=utf-16" },
-			-- 	filetypes = { "c", "cpp", "objc", "objcpp" },
-			-- 	on_attach = function(client, bufnr)
-			-- 		-- completions stay enabled, but disable diagnostics
-			-- 		vim.diagnostic.enable(false)
-			-- 	end,
+			-- 	cmd = {
+			-- 		"clangd",
+			-- 		"--background-index",
+			-- 		"--clang-tidy",
+			-- 		"--completion-style=detailed",
+			-- 		"--header-insertion=iwyu",
+			-- 		"--function-arg-placeholders",
+			-- 		"--fallback-style=llvm",
+			-- 	},
+			--
+			-- 	filetypes = {
+			-- 		"c",
+			-- 		"cpp",
+			-- 		"objc",
+			-- 		"objcpp",
+			-- 		"cuda",
+			-- 		"proto",
+			-- 	},
 			-- },
 		}
 		-- Ensure the servers and tools above are installed
