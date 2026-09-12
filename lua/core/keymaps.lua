@@ -96,7 +96,8 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 -- CompetiTest keymaps for competitive programming
 vim.keymap.set("n", "<leader>cta", "<cmd>CompetiTest add_testcase<CR>", { desc = "CompetiTest: Add testcase" })
 vim.keymap.set("n", "<leader>cte", "<cmd>CompetiTest edit_testcase<CR>", { desc = "CompetiTest: Edit testcase" })
-vim.keymap.set("n", "<leader>ctd", "<cmd>CompetiTest delete_testcase<CR>", { desc = "CompetiTest: Delete testcase" })
+-- vim.keymap.set("n", "<leader>ctd", "<cmd>CompetiTest delete_testcase<CR>", { desc = "CompetiTest: Delete testcase" })
+vim.keymap.set("n", "<leader>ctx", "<cmd>CompetiTest receive stop<CR>", { desc = "CompetiTest: Stop Receiving" })
 vim.keymap.set("n", "<leader>ctr", "<cmd>CompetiTest run<CR>", { desc = "CompetiTest: Run testcases" })
 vim.keymap.set(
 	"n",

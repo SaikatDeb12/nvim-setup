@@ -2,8 +2,10 @@ return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
 		----------------------------------------------------------------------
-		-- Gruvbox Dark Theme
+		-- Themes
 		----------------------------------------------------------------------
+
+		-- 1. Gruvbox Dark
 		local colors = {
 			black = "#282828",
 			white = "#ebdbb2",
@@ -51,6 +53,31 @@ return {
 		}
 
 		----------------------------------------------------------------------
+		-- Other dark themes
+		----------------------------------------------------------------------
+
+		-- 2. Catppuccin Mocha
+		-- local catppuccin_mocha = "catppuccin"
+
+		-- 3. Tokyo Night
+		-- local tokyo_night = "tokyonight"
+
+		-- 4. Dracula
+		-- local dracula = "dracula"
+
+		-- 5. Nord
+		-- local nord = "nord"
+
+		-- 6. Kanagawa
+		-- local kanagawa = "kanagawa"
+
+		-- 7. Rose Pine
+		-- local rose_pine = "rose-pine"
+
+		-- 8. OneDark
+		-- local onedark = "auto"
+
+		----------------------------------------------------------------------
 		-- Components
 		----------------------------------------------------------------------
 
@@ -67,6 +94,7 @@ return {
 			path = 1,
 			fmt = function(path)
 				local parts = {}
+
 				for part in path:gmatch("[^/]+") do
 					table.insert(parts, part)
 				end
@@ -121,12 +149,30 @@ return {
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				theme = gruvbox_dark,
 
-				section_separators = { left = "", right = "" },
+				-- Current theme
+				-- theme = gruvbox_dark,
+
+				-- Other options:
+				theme = "catppuccin",
+				-- theme = "tokyonight",
+				-- theme = "dracula",
+				-- theme = "nord",
+				-- theme = "kanagawa",
+				-- theme = "rose-pine",
+
+				section_separators = {
+					left = "",
+					right = "",
+				},
+
 				component_separators = "",
 
-				disabled_filetypes = { "alpha", "neo-tree" },
+				disabled_filetypes = {
+					"alpha",
+					"neo-tree",
+				},
+
 				always_divide_middle = true,
 			},
 
@@ -137,7 +183,9 @@ return {
 						fmt = function(str)
 							return " " .. str
 						end,
-						separator = { left = "" },
+						separator = {
+							left = "",
+						},
 						right_padding = 2,
 					},
 				},
@@ -145,25 +193,40 @@ return {
 				lualine_b = {
 					{
 						"branch",
-						separator = { left = "", right = "" },
+						separator = {
+							left = "",
+							right = "",
+						},
 					},
 				},
 
-				lualine_c = { filename },
+				lualine_c = {
+					filename,
+				},
 
 				lualine_x = {
 					diagnostics,
 					diff,
-					{ "encoding", cond = hide_in_width },
-					{ "filetype", cond = hide_in_width },
+					{
+						"encoding",
+						cond = hide_in_width,
+					},
+					{
+						"filetype",
+						cond = hide_in_width,
+					},
 				},
 
-				lualine_y = { "location" },
+				lualine_y = {
+					"location",
+				},
 
 				lualine_z = {
 					{
 						"progress",
-						separator = { right = "" },
+						separator = {
+							right = "",
+						},
 						left_padding = 2,
 					},
 				},
@@ -172,18 +235,29 @@ return {
 			inactive_sections = {
 				lualine_a = {},
 				lualine_b = {},
+
 				lualine_c = {
-					{ "filename", path = 1 },
+					{
+						"filename",
+						path = 1,
+					},
 				},
+
 				lualine_x = {
-					{ "location", padding = 0 },
+					{
+						"location",
+						padding = 0,
+					},
 				},
+
 				lualine_y = {},
 				lualine_z = {},
 			},
 
 			tabline = {},
-			extensions = { "fugitive" },
+			extensions = {
+				"fugitive",
+			},
 		})
 	end,
 }

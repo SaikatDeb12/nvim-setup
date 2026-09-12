@@ -48,14 +48,14 @@ require("lazy").setup({
 	-- require("plugins.toggleterm"),
 })
 
--- vim.g.catppuccin_flavor = "light"
--- vim.cmd.colorscheme("catppuccin")
+vim.g.catppuccin_flavor = "light"
+vim.cmd.colorscheme("catppuccin")
 -- vim.cmd.colorscheme("ayu-mirage")
 -- vim.cmd.colorscheme("tokyonight")
 -- vim.cmd.colorscheme("bamboo")
 -- vim.cmd.colorscheme("darcula-dark")
 -- vim.cmd.colorscheme("kanagawa-wave")
-vim.cmd.colorscheme("miasma")
+-- vim.cmd.colorscheme("miasma")
 --
 -- vim.cmd.colorscheme("sonokai")
 -- vim.cmd.colorscheme("onedark")
