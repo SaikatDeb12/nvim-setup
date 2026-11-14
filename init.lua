@@ -19,7 +19,7 @@ rtp:prepend(lazypath)
 require("lazy").setup({
 	require("plugins.neotree"),
 	require("plugins.colortheme"),
-	require("plugins.bufferline"),
+	-- require("plugins.bufferline"),
 	require("plugins.alpha"),
 	-- require("plugins.snacks"),
 	require("plugins.lualine"),
@@ -46,6 +46,7 @@ require("lazy").setup({
 	require("plugins.mini-bufremove"),
 	require("plugins.undotree"),
 	require("plugins.richCord"),
+	require("plugins.barbar"),
 })
 
 vim.g.catppuccin_flavor = "light"

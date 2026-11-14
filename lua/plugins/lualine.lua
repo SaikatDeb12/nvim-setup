@@ -154,7 +154,7 @@ return {
 				-- theme = gruvbox_dark,
 
 				-- Other options:
-				theme = "catppuccin",
+				theme = "auto",
 				-- theme = "tokyonight",
 				-- theme = "dracula",
 				-- theme = "nord",
