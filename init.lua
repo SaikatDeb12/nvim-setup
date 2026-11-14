@@ -45,7 +45,7 @@ require("lazy").setup({
 	require("plugins.go"),
 	require("plugins.mini-bufremove"),
 	require("plugins.undotree"),
-	-- require("plugins.toggleterm"),
+	require("plugins.richCord"),
 })
 
 vim.g.catppuccin_flavor = "light"
